@@ -19,55 +19,26 @@ This document captures the **full troubleshooting process for macOS application 
      📝 Console Logs:              Applications > Utilities > Console
      🔄 Reinstall Application:     Delete application from **Applications folder**, then reinstall from the **App Store** or the developer’s website.
 
----
-
-📝 Example Prompts
-
-1. Force Quit:  
-- "If the app is frozen, press Command + Option + Esc, select the app from the list, and click Force Quit. Then, try reopening it."
-
-2. Check for Software Updates:  
-    "Make sure both your macOS and the app are updated. Go to Apple Menu > Software Update and see if anything is available."
-
-3. Reinstall the App:  
-    "If the app keeps crashing, try deleting it from the Applications folder and reinstalling it from the App Store or the app’s website."
-
-4. Check Console Logs:  
-    "Would you like me to help you check the Console logs to see if there’s a specific error? You can find it under Applications > Utilities > Console."
-
 
 📝 Prompts
 
      1️⃣ Force Quit  `Command + Option + Esc`
-     - "If the app is frozen, press Command + Option + Esc*, select the app from the list, and click **Force Quit**. Then, try reopening it."
+     - "If the app is frozen, press ⭐Command + Option + Esc⭐, select the app from the list, and click **Force Quit**. Then, try reopening it."
 
      2️⃣ Check for Software Updates
      - "Make sure both your MacOS and the app are updated. Go to Apple Menu > Software Update and see if anything is available."
 
-### 3️⃣ Reinstall the App
-- "If the app keeps crashing, try deleting it from the **Applications** folder and reinstalling it from the **App Store** or the app’s website."
+     3️⃣ Check Permissions: 
+     - "Sometimes, apps don’t open due to permission issues. Let’s check the Security & Privacy settings in System Preferences to ensure the app has necessary permissions."
 
-### 4️⃣ Check Console Logs
-- "Would you like me to help you check the **Console logs** to see if there’s a specific error? You can find it under **Applications > Utilities > Console**."
+     4️⃣ Reinstall the App
+     - "If the app keeps crashing, try deleting it from the Applications folder and reinstalling it from the **App Store** or the app’s website."
 
----
+     5️⃣ Check Console Logs
+     - "Would you like me to help you check the Console logs to see if there’s a specific error? 
+     - You can find it under **Applications > Utilities > Console."
 
-### Alternate Process Version (Dialogue Format)
 
-1. Force Quit and Relaunch:  
-    "Let’s first try force quitting the app. Press Command + Option + Esc, select the app, and click Force Quit. Then try reopening it."
-
-2. Check for Updates:  
-    "Go to the App Store and check if the app has any updates available."
-
-3. Check Permissions:  
-    "Sometimes, apps don’t open due to permission issues. 
-     Let’s check the Security & Privacy settings in System Preferences to ensure the app has necessary permissions."
-
-4. Reinstall the App:  
-    "If the app is still not launching, try deleting it from the Applications folder and reinstalling it from the App Store."
-
----
 
 ## 📚 Notes
 This file is part of my **Mac Troubleshooting Knowledge Base**, focused on application-level troubleshooting techniques for macOS.
