@@ -1,0 +1,204 @@
+🛠️ Mac Troubleshooting Guide: Boot Issues / Power Issues
+
+This guide provides **step-by-step troubleshooting procedures** for **Mac devices that won't turn on, won't boot properly, or boot to a black/blank screen**. Designed for **technicians and engineers**.
+
+---
+
+⚠️ Initial Check: Power and Basic Inspection
+
+1. Verify the Power Connection:**
+    - Check the power cable and adapter for damage.
+    - Try a different power outlet.
+    - For laptops, confirm the charger is working.
+2. Check for Signs of Power:
+    - Does the power LED light up?
+    - Do you hear the **fan** or drive spinning?
+    - Any startup chime?
+3. For External Displays (Mac mini, Mac Studio):
+    - Ensure the > monitor is powered on < and the cable is securely connected.
+
+---
+
+🔋 Step 1: Perform a Power Cycle
+
+1. Disconnect the power cable.
+2. Hold the **Power button** for **10 seconds**.
+3. Reconnect the power cable.
+4. Attempt to turn on the Mac.
+
+_____________________________________________________________________________________________________________________
+
+🔧 Step 2: Reset the SMC (Intel Macs Only)
+
+> ⚠️ Apple Silicon (M1/M2) does not have a manual SMC reset.
+
+For MacBooks with non-removable batteries (2018 and earlier):
+1. Shut down the Mac.
+2. Hold > Shift + Control + Option < (left side) and the > Power button** for 10 seconds <.
+3. Release all keys.
+4. Press the > Power button < to turn on.
+
+
+For Desktops (Mac mini, iMac, Mac Pro):
+1. Shut down the Mac.
+2. Disconnect the **power cord**.
+3. Wait **15 seconds**.
+4. Reconnect the **power cord**.
+5. Press the **Power button** to start the Mac.
+
+_____________________________________________________________________________________________________________________
+
+
+🧰 Step 3: Reset NVRAM/PRAM (Intel Macs Only)
+
+1. Turn off the Mac.
+2. Turn it back on and immediately press and hold: Option + Command + P + R
+3. Hold these keys for **about 20 seconds**.
+4. Release the keys and allow the Mac to boot.
+
+_____________________________________________________________________________________________________________________
+
+
+🖥️ Step 4: Check for External Device Conflicts
+
+- Disconnect all external devices except:
+    - Power cable
+    - Keyboard & mouse (if applicable)
+- Try booting the Mac with minimal hardware connected.
+
+_____________________________________________________________________________________________________________________
+
+
+⚙️ Step 5: Boot to Safe Mode
+
+> Safe Mode can help identify software-related boot issues.
+
+For Apple Silicon (M1/M2)
+1. Shut down the Mac.
+2. Press and hold the **Power button** until you see **Loading startup options**.
+3. Select your disk.
+4. Hold **Shift** and click **Continue in Safe Mode**.
+
+
+
+For Intel Macs
+1. Turn off the Mac.
+2. Turn it on and **immediately press and hold Shift**.
+3. Release **Shift** when you see the login screen.
+
+_____________________________________________________________________________________________________________________
+
+
+💻 Step 6: Boot to Recovery Mode
+
+> Recovery Mode allows access to Disk Utility and Reinstall options.
+
+For Apple Silicon (M1/M2)
+1. Shut down the Mac.
+2. Press and hold the **Power button** until **Loading startup options** appears.
+3. Select **Options**, then click **Continue**.
+
+For Intel Macs
+1. Restart the Mac and immediately press and hold:
+    ```
+    Command + R
+    ```
+2. Release the keys when you see the **Apple logo** or **spinning globe**.
+
+> Once in Recovery Mode, check the startup disk with **Disk Utility > First Aid**.
+
+_____________________________________________________________________________________________________________________
+
+
+🛠️ Step 7: Run Disk Utility - First Aid (Check Startup Disk)
+
+1. In **macOS Recovery Mode**, select **Disk Utility**.
+2. Select **Macintosh HD**.
+3. Click **First Aid** to check and repair disk errors.
+4. Restart the Mac after running First Aid.
+
+_____________________________________________________________________________________________________________________
+
+
+## 📡 Step 8: Internet Recovery (If Local Recovery Fails)
+
+For Intel Macs
+1. Restart the Mac and immediately press and hold: Option + Command + R
+2. Release the keys when a **spinning globe** appears.
+3. Follow prompts to access **Internet Recovery**.
+
+> Internet Recovery downloads the recovery system from Apple’s servers, which is useful if the local Recovery partition is corrupted.
+
+_____________________________________________________________________________________________________________________
+
+
+🔍 Step 9: Inspect Display Issues (Black/Blank Screen)
+
+1. Adjust Screen Brightness – Use the brightness keys to check if the screen is dimmed.
+2. External Display Check – If using an external monitor, test with:
+    - Different monitor
+    - Different cable/adapter
+3. Close and Open Lid (MacBooks) – Sometimes waking the MacBook triggers the display.
+
+_____________________________________________________________________________________________________________________
+
+⚠️ Step 10: Target Disk Mode (For Data Recovery)
+
+> If hardware damage is suspected but the drive may be intact, use Target Disk Mode to recover data.
+
+For Intel Macs
+1. Power off the Mac.
+2. Power it on while holding: T
+3. Connect the Mac to another Mac using a **Thunderbolt or USB-C cable**.
+4. The Mac should appear as an external disk on the second Mac.
+
+> For Apple Silicon, use **Share Disk** from Recovery Mode.
+
+_____________________________________________________________________________________________________________________
+
+
+📝 Step 11: Collect Logs and Diagnostic Information
+
+- If the Mac eventually boots, collect:
+    - System Information Report (System Information > File > Save).
+    - Console Logs (Applications > Utilities > Console).
+    - Panic/Crash Reports from: /Library/Logs/DiagnosticReports/
+        
+- Use **Apple Diagnostics** to check for hardware faults.
+
+
+
+🔹 Run Apple Diagnostics
+
+   Apple Silicon
+1. Shut down the Mac.
+2. Press and hold **Power** until **Options** appears.
+3. Press / Command + D / to start diagnostics.
+
+   Intel Macs
+1. Restart and immediately hold: D
+2. Follow on-screen prompts.
+
+_____________________________________________________________________________________________________________________
+
+✅ Quick Troubleshooting Checklist
+| 1 | Power Cycle 
+| 2 | Reset SMC (Intel only) 
+| 3 | Reset NVRAM/PRAM (Intel only) 
+| 4 | Disconnect External Devices 
+| 5 | Boot to Safe Mode 
+| 6 | Boot to Recovery Mode 
+| 7 | Run Disk Utility First Aid 
+| 8 | Try Internet Recovery 
+| 9 | Check Display (Brightness, External Monitor) 
+| 10 | Use Target Disk Mode (if necessary) 
+| 11 | Collect Logs & Run Apple Diagnostics 
+
+---
+
+📂 Suggested File Naming for Logs
+
+When saving diagnostic reports, use:
+
+[DeviceName]_[Date]_BootIssueLog.log
+Example: MacBookPro14_2025-03-03_BootIssueLog.log
