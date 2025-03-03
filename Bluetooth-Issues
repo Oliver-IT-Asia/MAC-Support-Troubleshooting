@@ -3,15 +3,13 @@
 This document provides step-by-step troubleshooting procedures for Bluetooth issues on MacOS, including problems with devices not connecting, 
 disconnecting randomly, or failing to pair. Designed for **technicians and engineers** to follow during support cases.
 
-
-
 🔄 Step 1: Toggle Bluetooth Off and On
 
 1. Click the > Bluetooth icon* < in the top-right **menu bar**.
 2. Toggle Bluetooth Off.
 3. Wait a few seconds.
 4. Toggle Bluetooth On** again.
-
+📞 "Try toggling Bluetooth off and on. You can do this from the Bluetooth icon in the top-right corner of the menu bar."
 __________________________________________________________________________________________________________________________
 
 🔧 Step 2: Reset the Bluetooth Module (for older macOS versions)
@@ -22,7 +20,7 @@ ________________________________________________________________________________
 2. Click the > Bluetooth icon < in the menu bar.
 3. Select Reset the Bluetooth Module.
 4. Restart the Mac and recheck Bluetooth functionality.
-
+📞 "If that doesn’t work, we can reset the Bluetooth module. Hold down Shift + Option, click the Bluetooth icon, and select Reset the Bluetooth module."
 __________________________________________________________________________________________________________________________
 
 🔄 Step 3: Remove and Re-Pair the Device
@@ -33,7 +31,7 @@ ________________________________________________________________________________
 4. Click the (X) next to the device to remove it.
 5. Put the device in > pairing mode <.
 6. Reconnect the device and test.
-
+📞 "Try removing and re-pairing the device. Go to System Preferences > Bluetooth, select your device, and click the X to remove it. Then, reconnect."
 __________________________________________________________________________________________________________________________
 
 📶 Step 4: Check for Wireless Interference
@@ -43,7 +41,7 @@ ________________________________________________________________________________
     - Microwaves
     - Wireless speakers
     - USB 3.0 devices (they can cause interference at close range)
-
+📞 "Make sure there are no other devices interfering with Bluetooth (e.g., microwaves, other wireless devices)."
 __________________________________________________________________________________________________________________________
 
 🛑 Step 5: Restart the Mac
@@ -59,14 +57,8 @@ ________________________________________________________________________________
 > This step resets all paired devices, so they will need to be re-paired.
 
 1. Open Finder.
-2. Press `Shift + Command + G` and go to:
-    ```
-    /Library/Preferences/
-    ```
-3. Locate the file:
-    ```
-    com.apple.Bluetooth.plist
-    ```
+2. Press `Shift + Command + G` and go to: /Library/Preferences/
+3. Locate the file: com.apple.Bluetooth.plist
 4. Move this file to the **Trash**.
 5. Restart the Mac.
 6. Re-pair devices after reboot.
@@ -75,8 +67,7 @@ ________________________________________________________________________________
 
 🖥️ Step 7: Reset SMC (For Intel Macs Only)
 
-> Not applicable for **Apple Silicon Macs (M1/M2)**.
-
+Not applicable for **Apple Silicon Macs (M1/M2).
 1. Shut down** the Mac.
 2. Hold Shift + Control + Option + Power button** for 10 seconds.
 3. Release all keys and power on the Mac.
@@ -86,8 +77,7 @@ ________________________________________________________________________________
 
 🧑‍🔧 Step 8: Test in Safe Mode
 
-> For Apple Silicon (M1/M2)
-
+For Apple Silicon (M1/M2)
 1. Shut down the Mac.
 2. Press and hold the **Power button** until **Loading startup options** appears.
 3. Select your disk.
@@ -95,18 +85,16 @@ ________________________________________________________________________________
 
 
 
->For Intel Macs
-
+For Intel Macs
 1. Restart the Mac.
 2. Immediately hold **Shift** until the login screen appears.
-
 > Test if Bluetooth works in Safe Mode. This helps identify if third-party software is interfering.
 
 __________________________________________________________________________________________________________________________
 
 📊 Step 9: Review System Information for Hardware Status
 
-1. Open **System Information** (Applications > Utilities) or (Launchpad > Search > System Information.
+1. Open **System Information** (Applications > Utilities) or (Launchpad > Search > System Information).
 2. In the sidebar, select > Bluetooth <.
 3. Review:
     - Bluetooth hardware detected.
@@ -117,12 +105,10 @@ If Bluetooth hardware is missing or shows errors, it could indicate a > hardware
 
 __________________________________________________________________________________________________________________________
 
-
 ⚙️ Step 10: Check for macOS Updates
 
 1. Go to **Apple Menu () > System Settings > General > Software Update**.
 2. Install any available updates, as they may contain Bluetooth-related fixes.
-
 __________________________________________________________________________________________________________________________
 
 👥 Step 11: Test in a New User Account
@@ -131,44 +117,34 @@ ________________________________________________________________________________
     - Go to System Settings > Users & Groups > Add User.
 2. Log into the new account.
 3. Test Bluetooth functionality to check if the issue is user-profile specific.
-
 __________________________________________________________________________________________________________________________
 
 📝 Step 12: Collect Logs for Escalation (Advanced)
 
 1. Open Console (Applications > Utilities).
-2. Filter for:
-    ```
-    Bluetooth
-    ```
+2. Filter for: Bluetooth
 3. Capture logs related to the time of the issue.
 4. If escalating to Apple or Tier 2/3 support, also collect:
     - System Information report (from **System Information > File > Save**).
-    - Crash logs from:
-        ```
-        ~/Library/Logs/DiagnosticReports/
-        ```
-
+    - Crash logs from: ~/Library/Logs/DiagnosticReports/
+        
 __________________________________________________________________________________________________________________________
 
 ✅ Quick Troubleshooting Checklist
+| 1 | Toggle Bluetooth Off/On 
+| 2 | Reset Bluetooth Module (if available) 
+| 3 | Remove & Re-pair Device 
+| 4 | Check for Interference 
+| 5 | Restart Mac 
+| 6 | Remove Bluetooth Preferences File 
+| 7 | Reset SMC (Intel Macs) 
+| 8 | Test in Safe Mode 
+| 9 | Review System Information (Hardware Check) 
+| 10 | Check for macOS Updates 
+| 11 | Test in New User Account 
+| 12 | Collect Logs for Escalation 
 
-| Step | Action |
-|---|---|
-| 1 | Toggle Bluetooth Off/On |
-| 2 | Reset Bluetooth Module (if available) |
-| 3 | Remove & Re-pair Device |
-| 4 | Check for Interference |
-| 5 | Restart Mac |
-| 6 | Remove Bluetooth Preferences File |
-| 7 | Reset SMC (Intel Macs) |
-| 8 | Test in Safe Mode |
-| 9 | Review System Information (Hardware Check) |
-| 10 | Check for macOS Updates |
-| 11 | Test in New User Account |
-| 12 | Collect Logs for Escalation |
-
----
+__________________________________________________________________________________________________________________________
 
 📂 Suggested File Naming for Logs
 
