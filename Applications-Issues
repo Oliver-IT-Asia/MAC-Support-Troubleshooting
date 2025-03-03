@@ -1,8 +1,8 @@
-# 🛠️ Mac Troubleshooting Guide: Application Crashes/Freezes
+🛠️ Mac Troubleshooting Guide: Application Crashes/Freezes
 
 This document provides **step-by-step troubleshooting procedures** for **Mac applications that are crashing, freezing, or not launching/responding**. This guide is designed for **technicians and engineers** who need a structured process for diagnosing and resolving application issues on macOS.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 🔄 Step 1: Force Quit and Relaunch
 
@@ -11,37 +11,35 @@ This document provides **step-by-step troubleshooting procedures** for **Mac app
 3. Select the unresponsive application.
 4. Click > Force Quit <.
 5. Relaunch the application and check for issues.
+📞 "If the app is frozen, press Command + Option + Esc, select the app from the list, and click Force Quit. Then, try reopening it."
 
----
+_____________________________________________________________________________________________________________________________________________
 
 🧹 Step 2: Clear Application Cache (if applicable)
 
 1. Open > Finder <.
 2. Press > Shift + Command + G < to open ''Go to Folder''.
-3. Enter:
-    ```
-    ~/Library/Caches/
-    ```
+3. Enter: ~/Library/Caches/
 4. Locate the folder related to the problematic application.
 5. Move the folder to >Trash<.
 6. Relaunch the application.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 🔄 Step 3: Restart the Mac
 
 - Go to **Apple Menu ()** > **Restart**.
 - After restarting, check if the application launches normally.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 🔄 Step 4: Check for Software Updates
 
 1. Go to **Apple Menu ()** > **System Settings** > **General** > **Software Update**.
 2. Install any available macOS updates.
 3. Open the **App Store**, navigate to **Updates**, and check for **application updates**.
-
----
+📞 "Make sure both your macOS and the app are updated. Go to Apple Menu > Software Update and see if anything is available."  
+_____________________________________________________________________________________________________________________________________________
 
 🛑 Step 5: Test in Safe Mode (Check for Third-Party Interference)
 
@@ -58,7 +56,7 @@ For Intel Macs
 
 > In Safe Mode, check if the application works correctly.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 🔐 Step 6: Check Application Permissions
 
@@ -68,42 +66,39 @@ For Intel Macs
     - Files and Folder
     - Accessibility
 3. Ensure the application has the necessary permissions.
+📞 "Sometimes, apps don’t open due to permission issues. Let’s check the Security & Privacy settings in System Preferences to ensure the app has necessary permissions."
+_____________________________________________________________________________________________________________________________________________
 
----
-
-## 📥 Step 7: Reinstall the Application
+📥 Step 7: Reinstall the Application
 
 1. Open > Finder < > Applications <.
 2. Locate the app and move it to Trash.
 3. Download the latest version from the **App Store** or the official website.
 4. Reinstall the application and test.
-
----
+____________________________________________________________________________________________________________________________________
 
 🧑‍💻 Step 8: Check Console Logs for Errors
 
 1. Open > Applications (Launchpad) > Search > Console.
 2. Use the > Search bar < to filter logs by the application's name.
 3. Review error messages for clues (permissions, missing files, etc.).
-
----
+📞 "Would you like me to help you check the Console logs to see if there’s a specific error? You can find it under Applications > Utilities > Console.".    
+_____________________________________________________________________________________________________________________________________________
 
 💻 Step 9: Run Disk Utility (Check for Disk Errors)
-
-1. Open **Applications** > Utilities** > Disk Utility or Launchpad > Search > Disk Utility.
+1. Open Applications > Utilities > Disk Utility or Launchpad > Search > Disk Utility.
 2. Select > Macintosh HD <.
 3. Click > First Aid < and follow prompts.
 4. Check if the application works after the scan.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 ⚠️ Step 10: Disable Startup/ Login Items
-
 1. Go to System Settings > General > Login Items.
 2. Disable any non-essential login items.
 3. Restart the Mac and test the application again.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 👥 Step 11: Test in a New User Account
 
@@ -112,25 +107,20 @@ For Intel Macs
 2. Log into the new account.
 3. Test if the application works under the new user profile.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 📝 Step 12: Collect Crash Reports for Escalation
 
 1. Open Applications > Utilities > Console.
-2. Navigate to:
-    ```
-    ~/Library/Logs/DiagnosticReports/
-    ```
+2. Navigate to: ~/Library/Logs/DiagnosticReports/
 3. Locate and collect the latest **crash report** for the affected application.
 4. Share this with the **application developer** or escalate to Tier 2/3 support.
 
----
+_____________________________________________________________________________________________________________________________________________
 
 🧰 Optional: Check System Integrity (Advanced)
 
 Run the following Terminal command to verify system assessment status:
-
-```bash
 sudo /usr/sbin/spctl --status
 If it does not show assessments enabled, system protection might be partially disabled, which can affect app stability.
 
@@ -144,10 +134,10 @@ For Apple Silicon: Hold Power during startup.
 For Intel: Hold Command + R during startup.
 Select Reinstall macOS.
 
+_____________________________________________________________________________________________________________________________________________
 
 
 ✅ Quick Troubleshooting Checklist
-Step	Action
 1	Force Quit & Relaunch
 2	Clear Application Cache
 3	Restart Mac
@@ -162,12 +152,12 @@ Step	Action
 12	Collect Crash Reports
 13	Check System Integrity (Optional)
 14	Reinstall macOS (Last Resort)
-📂 Suggested File Naming for Crash Reports
 
+
+📂 Suggested File Naming for Crash Reports
 When collecting logs, save files with the following naming convention for easy identification:
 [AppName]_[Date]_[DeviceName]_CrashReport.log
-Example:
-Safari_2025-03-03_MacBookPro14_CrashReport.log
+Example: Safari_2025-03-03_MacBookPro14_CrashReport.log
 
 
 📝 Notes
