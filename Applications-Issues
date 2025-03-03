@@ -16,8 +16,8 @@ This document captures the full troubleshooting process for MacOS application is
 
 ⚙️ Key Commands & Processes
      ✋ Force Quit:                Command + Option + Esc
-     📝 Console Logs:              Applications > Utilities > Console
-     🔄 Reinstall Application:     Delete application from **Applications folder**, then reinstall from the **App Store** or the developer’s website.
+     📝 Console Logs:              Launchpad > Search Console
+     🔄 Reinstall Application:     Delete application from Applications folder, then reinstall from the App Store or the developer’s website.
 
 
 📝 Prompts
